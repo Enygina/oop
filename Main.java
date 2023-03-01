@@ -15,7 +15,12 @@ public class Main {
                 .addProduct(new Product("fan", 43.21))
                 .addProduct(new Beer("alcoholfree", 67.89))
                 .addProduct(new Beer("notbeer", 67.89, 99))
-                .addProduct(new CursedProducts("milk", 56.65, 7));
+                .addProduct(new CursedProducts("milk", 56.65, 7))
+                .addProduct(new Chokolate("milka", 65.99, "milky"))
+                .addProduct(new Chokolate("rittersport", 100.50))
+                .addProduct(new Water("aquaMin", 30.00))
+                .addProduct(new Water("piligrim", 50.00, "no"));
+
         System.out.println(store);
         System.out.println("searching for ay's");
         System.out.println(store.findProduct("ys"));
