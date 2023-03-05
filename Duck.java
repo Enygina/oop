@@ -1,6 +1,6 @@
 
 
-public class Duck extends Herbivores implements Flyable, Runable{
+public class Duck extends Herbivores implements Flyable, Runable, Swimable {
     public Duck(String nickname) {
         super(nickname);
 
@@ -11,7 +11,7 @@ public class Duck extends Herbivores implements Flyable, Runable{
         return 50;
     }
     public String toString(){
-        return "I'm duck. " + super.toString() + ". My speed is " + speedOfRun() + ", speed of fly " + speedOfFly();
+        return "I'm duck. " + super.toString() + ". My run speed is " + speedOfRun() + ", speed of fly " + speedOfFly()+ ". My swim speed is " + speedOfSwim();
     }
     @Override
     public int speedOfRun() {
@@ -21,5 +21,10 @@ public class Duck extends Herbivores implements Flyable, Runable{
     @Override
     public String say() {
         return "Krya-krya";
+    }
+
+    @Override
+    public int speedOfSwim() {
+        return 3;
     }
 }
